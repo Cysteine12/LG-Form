@@ -15,6 +15,7 @@ import adminRoute from './modules/admin/admin.route.js'
 import logger from './middlewares/logger.js'
 import { config } from './config/config.js'
 import hbsHelpers from './config/hbs.js'
+import sessionMiddleware from './config/session.js'
 
 const app = express()
 
@@ -45,13 +46,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use(rateLimiter)
 
-app.use(
-  session({
-    secret: config.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
-  })
-)
+app.use(sessionMiddleware)
 app.use(flash())
 app.use(passport.initialize())
 app.use(passport.session())
