@@ -13,11 +13,6 @@
         <th>LG Origin</th>
         <th>LG Resident</th>
         <th>Phone</th>
-        {{!-- <th>Matric No</th> --}}
-        {{!-- <th>DOB</th>
-        <th>Gender</th>
-        <th>Marital Status</th> --}}
-        {{!-- <th>Vocational Skill</th> --}}
         <th>Actions</th>
       </tr>
     </thead>
@@ -32,20 +27,24 @@
         <td data-label="LG Origin">{{lg_origin}}</td>
         <td data-label="LG Resident">{{lg_resident}}</td>
         <td data-label="Phone">0{{phone}}</td>
-        {{!-- <td data-label="DOB">2000-01-15</td> --}}
-        {{!-- <td data-label="Gender">Female</td> --}}
-        {{!-- <td data-label="Marital Status">Single</td> --}}
-        {{!-- <td data-label="Matric No">ABU/20/1234</td> --}}
-        {{!-- <td data-label="Vocational Skill">Hair Styling</td> --}}
         <td data-label="Actions">
           <div class="dashboard-action-buttons">
-            <button class="btn-edit">Edit</button>
-            <button class="btn-delete">Delete</button>
+            <a href="/submissions/{{id}}" class="btn-edit">View</a>
+            {{!-- <button class="btn-delete">Delete</button> --}}
           </div>
         </td>
       </tr>
       {{/each}}
     </tbody>
   </table>
+
+   <div class="dashboard-pagination">
+    <button class="pagination-button"><i class="fas fa-angle-double-left"></i></button>
+    {{#times total}}
+    <div class="pagination-number">{{this}}</div>
+    {{/times}}
+
+    <button class="pagination-button"><i class="fas fa-angle-double-right"></i></button>
+  </div>
   </div>
 </div>

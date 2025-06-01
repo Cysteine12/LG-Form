@@ -6,8 +6,6 @@ import authorize from '../../middlewares/authorize.js'
 const router = express.Router()
 
 router.get('/login', (req, res) => {
-  console.log('iran')
-
   res.status(200).render('admin/login', {
     layout: 'admin_layout',
     msg: req.flash('message'),

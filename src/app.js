@@ -14,6 +14,7 @@ import submissionRoute from './modules/submissions/submission.route.js'
 import adminRoute from './modules/admin/admin.route.js'
 import logger from './middlewares/logger.js'
 import { config } from './config/config.js'
+import hbsHelpers from './config/hbs.js'
 
 const app = express()
 
@@ -62,6 +63,7 @@ app.engine(
   '.hbs',
   hbs.engine({
     extname: '.hbs',
+    helpers: hbsHelpers,
   })
 )
 app.set('view engine', '.hbs')

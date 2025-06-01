@@ -13,14 +13,19 @@ const login = async (req, res) => {
 
 const dashboard = async (req, res) => {
   try {
-    const [submissions, total] = await submissionService.findSubmissions()
-    console.log(submissions)
+    const { page } = req.query
+    const options = { page: Number(page), limit: 40 }
+
+    const [submissions, total] = await submissionService.findSubmissions(
+      {},
+      options
+    )
 
     res.status(200).render('admin/dashboard', {
       layout: 'admin_layout',
       user: req.user,
       data: submissions,
-      total: total,
+      total: Math.ceil(total / options.limit),
     })
   } catch (err) {
     res.status(401).render('admin/dashboard', {
