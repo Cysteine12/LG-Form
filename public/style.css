@@ -1,0 +1,419 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f0f3ff;
+  color: #333;
+}
+
+/* Top Address Bar */
+.top-bar {
+  background-color: #3b4e9c;
+  color: white;
+  text-align: right;
+  padding: 5px 20px;
+  font-size: 14px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Main Header */
+.main-header {
+  background: rgba(0, 0, 0, 0.5); /* Slight dark overlay */
+  background-size: cover;
+  background-position: center;
+  padding: 10px 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 60px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(59, 78, 156, 0.15);
+  border-top: 6px solid #3b4e9c;
+}
+
+/* Form Base */
+form {
+  width: 100%;
+}
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #3b4e9c;
+}
+
+form input[type='text'],
+form input[type='email'],
+form input[type='password'],
+form input[type='date'],
+form input[type='number'],
+form input[type='tel'],
+form input[type='file'],
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #ccd2e3;
+  border-radius: 6px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #3b4e9c;
+  box-shadow: 0 0 5px rgba(59, 78, 156, 0.2);
+  outline: none;
+}
+
+/* Grouped Controls */
+.form-control {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group .form-control {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* Error Box */
+#error {
+  color: #d9534f;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Submit Button */
+button[type='submit'] {
+  background-color: #3b4e9c;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type='submit']:hover {
+  background-color: #2e3e7b;
+}
+
+/* File Input Custom Styling (Optional) */
+input[type='file'] {
+  background-color: #f8f9fc;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .form-group {
+    flex-direction: column;
+  }
+}
+
+.footer {
+  background-color: #3b4e9c;
+  color: white;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1 1 300px;
+}
+
+.footer-logo {
+  width: 160px;
+  margin-bottom: 10px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-col h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-socials {
+  margin-top: 15px;
+}
+
+.footer-socials a {
+  color: white;
+  margin-right: 12px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footer-socials a:hover {
+  color: #dcdcdc;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 13px;
+}
+
+.footer-col i {
+  margin-right: 8px;
+}
+
+.alert-icon {
+  margin: 20px 0;
+  font-size: 50px;
+  background: #58d369;
+  color: white;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.dashboard-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  padding: 20px;
+}
+
+.dashboard-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-wrap: nowrap;
+}
+
+.dashboard-table-header {
+  background-color: #4a90e2;
+  color: #ffffff;
+}
+
+.dashboard-table-header th {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.dashboard-table-row td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.dashboard-table-row:hover {
+  background-color: #f1f1f1;
+}
+
+.dashboard-action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit {
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+  opacity: 0.9;
+}
+
+.dashboard-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pagination-button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: #4a90e2;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination-button:hover {
+  background-color: #357ac8;
+}
+
+.pagination-number {
+  background-color: #e0e7ff;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-number:hover {
+  background-color: #c7d2fe;
+}
+
+.pagination-number.active {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard-table,
+  .dashboard-table thead,
+  .dashboard-table tbody,
+  .dashboard-table th,
+  .dashboard-table td,
+  .dashboard-table tr {
+    display: block;
+  }
+
+  .dashboard-table-header {
+    display: none;
+  }
+
+  .dashboard-table-row {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: white;
+  }
+
+  .dashboard-table-row td {
+    position: relative;
+    padding-left: 50%;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .dashboard-table-row td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  .dashboard-action-buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .dashboard-pagination {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

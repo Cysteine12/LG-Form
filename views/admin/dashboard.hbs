@@ -1,0 +1,51 @@
+<div class="dashboard-container">
+  <h2 class="dashboard-heading">Student Dashboard</h2>
+
+  <div class="dashboard-table-wrapper">
+    <table class="dashboard-table">
+    <thead class="dashboard-table-header">
+      <tr>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>School</th>
+        <th>Admission Year</th>
+        <th>Level</th>
+        <th>LG Origin</th>
+        <th>LG Resident</th>
+        <th>Phone</th>
+        {{!-- <th>Matric No</th> --}}
+        {{!-- <th>DOB</th>
+        <th>Gender</th>
+        <th>Marital Status</th> --}}
+        {{!-- <th>Vocational Skill</th> --}}
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data}}
+      <tr class="dashboard-table-row">
+        <td data-label="Full Name">{{name}}</td>
+        <td data-label="Email">{{email}}</td>
+        <td data-label="School">{{school}}</td>
+        <td data-label="Admission Year">{{admission_year}}</td>
+        <td data-label="Level">{{school_level}}</td>
+        <td data-label="LG Origin">{{lg_origin}}</td>
+        <td data-label="LG Resident">{{lg_resident}}</td>
+        <td data-label="Phone">0{{phone}}</td>
+        {{!-- <td data-label="DOB">2000-01-15</td> --}}
+        {{!-- <td data-label="Gender">Female</td> --}}
+        {{!-- <td data-label="Marital Status">Single</td> --}}
+        {{!-- <td data-label="Matric No">ABU/20/1234</td> --}}
+        {{!-- <td data-label="Vocational Skill">Hair Styling</td> --}}
+        <td data-label="Actions">
+          <div class="dashboard-action-buttons">
+            <button class="btn-edit">Edit</button>
+            <button class="btn-delete">Delete</button>
+          </div>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+generator client {
+  provider        = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id                        String          @id @default(uuid())
+  email                     String          @unique
+  password                  String
+}
+
+model Submission {
+  id                        String          @id @default(uuid())
+  name                      String
+  email                     String          @unique
+  dob                       String
+  sex                       GENDER   
+  marital_status            MARITAL_STATUS
+  school                    String
+  matric                    String
+  phone                     Int             
+  admission_year            Int
+  school_level              Int
+  lg_origin                 String
+  lg_resident               String
+  v_skill                   String
+  created_at                DateTime        @default(now())
+
+  files                     File[]
+}
+
+model File {
+  id                        String          @id @default(uuid())
+  filepath                  String
+  mimetype                  String
+  filetype                  FileType
+  submission_id             String   
+  created_at                DateTime        @default(now())
+
+  submission                Submission      @relation(fields: [submission_id], references: [id])
+}
+
+enum GENDER {
+  MALE
+  FEMALE
+}
+
+enum MARITAL_STATUS {
+  SINGLE
+  MARRIED
+}
+
+enum FileType {
+  SCHOOL_ID
+  LG_ID
+  ADMISSION_LETTER
+}

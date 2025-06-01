@@ -1,0 +1,19 @@
+<div class="container" style="max-width: 500px;">
+  <h3 style="text-align: center">Welcome Back!</h3>
+  <form id="formId" action="/admin/login" method="POST">
+    <div id="error">{{message}}</div>
+
+    <div class="form-control">
+      <label for="email">Email*</label>
+      <input type="email" name="email" placeholder="Email..." required />
+    </div>
+    <div class="form-control">
+      <label for="password">Password*</label>
+      <input type="password" name="password" placeholder="Password..."  required />
+    </div>
+
+    <div style="display: flex; justify-content: center">
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>
