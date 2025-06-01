@@ -1,7 +1,7 @@
 import session from 'express-session'
 import { config } from './config.js'
 import pkg from 'express-mysql-session'
-const MySQLStore = session(pkg)
+const MySQLStore = pkg(session)
 
 const sessionStore = new MySQLStore(config.DATABASE_URL)
 
